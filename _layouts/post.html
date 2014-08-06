@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html>
-  {% include head.html %}
-  <body>
-      {% include header.html %}
-
-    <div class="content">
-    	<div class="post_date">
+---
+layout: default
+---
+<div class="content">
+  <div class="post_date">
 		<span><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span>
 	</div>
 
 	<h1 class="post_title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
 	
 	<div class="post_content">{{ content }}</div>
-    </div>
-
-    {% include footer.html %}
-</body>
-</html>
-
+</div>
