@@ -6,7 +6,7 @@ layout: default
 		<span >{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</span>
 	</div>
 
-	<h1 class="post_title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+	<h1 class="post_title"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h1>
 	
 	<div class="post_content">{{ content }}</div>
 </div>
