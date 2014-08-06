@@ -5,8 +5,8 @@
       {% include header.html %}
 
     <div class="content">
-    	<div class="post_date_t">
-		<span >{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</span>
+    	<div class="post_date">
+		<span ><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span>
 	</div>
 
 	<h1 class="post_title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
