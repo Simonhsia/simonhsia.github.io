@@ -1,6 +1,6 @@
 ---
 layout: post
-title: IMDb Top 250 Picks
+title: IMDb Top 250 Picks.
 ---
 有点闲情去翻了下 IMDb Top 250，列了单影单，一些近年来自己没看或是想再看一遍的片子。
 
