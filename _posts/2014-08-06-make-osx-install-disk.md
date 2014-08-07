@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "制作 OSX 安装 U 盘"
-author: simon_hsia
+author: simon
 excerpt: "OSX 安装 U 盘制作记要"
 tags: [OSX]
 ---

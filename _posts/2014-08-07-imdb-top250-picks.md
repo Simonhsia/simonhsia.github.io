@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "IMDb Top 250 Picks"
-author: simon_hsia
+author: simon_diary
 excerpt: "近期看的影单"
 tags: [Movie, Diary]
 ---

@@ -1,7 +1,25 @@
 # Authors
 
-simon_hsia:
+simon:
   name: Simon Hsia
   web: http://simonhsia.github.io
   bio: "hi, im simon"
-  avatar: bio-photo.png
+  avatar: simonhsia.jpg
+
+simon_diary:
+  name: Simon Hsia
+  web: http://simonhsia.github.io
+  bio: "hi, im simon"
+  avatar: simonhsia-d.jpg
+
+simon_coffee:
+  name: Simon Hsia
+  web: http://simonhsia.github.io
+  bio: "hi, im simon"
+  avatar: simonhsia-c.jpg
+
+simon_tea:
+  name: Simon Hsia
+  web: http://simonhsia.github.io
+  bio: "hi, im simon"
+  avatar: simonhsia-t.jpg
