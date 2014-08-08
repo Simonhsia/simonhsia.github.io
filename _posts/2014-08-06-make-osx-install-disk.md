@@ -4,6 +4,7 @@ title: "制作 OSX 安装 U 盘"
 author: simon
 excerpt: "OSX 安装 U 盘制作记要"
 tags: [OSX]
+comments: true
 ---
 
 \# 准备U盘
