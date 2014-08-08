@@ -4,6 +4,7 @@ title: "IMDb Top 250 Picks"
 author: simon_diary
 excerpt: "近期看的影单"
 tags: [Movie, Diary]
+comments: true
 ---
 有点闲情去翻了下 IMDb Top 250，列了张近期要看影单。一些近年来自己没看或是想再看一遍的片子。
 
