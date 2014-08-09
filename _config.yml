@@ -3,7 +3,6 @@
 title:            Simon Hsia
 locale:           zh_CN
 url:              http://simonhsia.github.io
-disqus_shortname: simonhsia
 
 # Jekyll configuration
 
@@ -30,7 +29,7 @@ owner:
   avatar: simonhsia.jpg
   bio: "hi, i'm simon."
   email: 
-  disqus-shortname: 
+  disqus-shortname: simonhsia
   twitter: 
   facebook: 
   google:
