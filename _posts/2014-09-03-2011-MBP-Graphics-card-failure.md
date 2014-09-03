@@ -2,15 +2,15 @@
 layout: post
 title: "2011 MacBook Pro 独立显卡故障「A卡显卡门」"
 author: simon_diary
-excerpt: "嗯，我又加入了 2011 A卡显卡门俱乐部"
+excerpt: "嗯，我又加入了 2011 MBP A卡显卡门俱乐部"
 tags: [MBP, Macbook Pro, Graphics Card, Diary]
 comments: true
 ---
 
-嗯，我又加入了 2011 A卡显卡门俱乐部。而 Apple Care 到期没注意，再次出现独立显卡故障时，发现已经过保4个月。
+嗯，我又加入了 2011 MBP A卡显卡门俱乐部。而 Apple Care 到期没注意，再次出现独立显卡故障时，发现已经过保4个月。
 
 <br />
-之前因为独显（HD6750M）问题换了 2 次主板，可恨的是都没避开 A 卡门。现在只能强制使用集显，来临时性解决这个问题。
+之前因为独显（HD6750M）问题换了 2 次主板，可恨的是都没能避开显卡门。现在只能强制使用集显，来临时性解决这个问题。
 
 <br />
 简单介绍一下「此俱乐部」。
