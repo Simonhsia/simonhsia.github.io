@@ -1,39 +1,740 @@
----
-layout: post
-title: "制作 OSX 安装 U 盘"
-author: simon
-excerpt: "OSX 安装 U 盘制作记要"
-tags: [OSX]
-comments: true
----
 
-\# 准备U盘
 
-1. 用「磁盘工具」分区 U 盘，
 
-2. 格式为「Mac OS 扩展」、方案选项为「GUID 分区表」
 
-3. 制作
+<!DOCTYPE html>
+<html lang="en" class="   ">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    
+    
+    <title>simonhsia.github.io/2014-08-06-make-osx-install-disk.md at master · Simonhsia/simonhsia.github.io</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png">
+    <meta property="fb:app_id" content="1401488693436528">
 
-\# 源文件
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="Simonhsia/simonhsia.github.io" name="twitter:title" /><meta content="simonhsia.github.io - Diary" name="twitter:description" /><meta content="https://avatars1.githubusercontent.com/u/8306701?v=2&amp;s=400" name="twitter:image:src" />
+<meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars1.githubusercontent.com/u/8306701?v=2&amp;s=400" property="og:image" /><meta content="Simonhsia/simonhsia.github.io" property="og:title" /><meta content="https://github.com/Simonhsia/simonhsia.github.io" property="og:url" /><meta content="simonhsia.github.io - Diary" property="og:description" />
 
-1. 在安装 App 右键「显示包内容」
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035">
+    <link rel="xhr-socket" href="/_sockets">
 
-2. 装载 `Contents/SharedSupport/InstallESD.dmg`
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient>
+      <meta name="google-analytics" content="UA-3769691-2">
 
-\# 制作U盘
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="B49DCC3A:6A43:3E214F1C:540720EC" name="octolytics-dimension-request_id" /><meta content="8306701" name="octolytics-actor-id" /><meta content="Simonhsia" name="octolytics-actor-login" /><meta content="2912bd06f6c4bbb66822d2382db10bd474aae2a4f9994b991d169b6ec6be0e7b" name="octolytics-actor-hash" />
+    
 
-1. 在「磁盘工具」选择 U 盘 > 恢复
+    
+    
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
 
-2. 在「源磁盘」输入 `/Volumes/OS X Install ESD/BaseSystem.dmg`               
-「# BaseSystem.dmg 是隐藏文件，也可以在终端用 `open` 装载 dmg」
 
-3. 拖拽 U 盘至「目的磁盘」
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="HPn0jvM6KzCzZOZyHuw9wCukQSS4szZEDsVtcMvyABiBUpqL2E9rxDQKqq0BtF0OcmPA/JDzZsi8UD8lODlUiA==" name="csrf-token" />
 
-4. 恢复
+    <link href="https://assets-cdn.github.com/assets/github-60d21ea6f2519495d5d67b7a940d8ca229a34bec.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://assets-cdn.github.com/assets/github2-8d93867f647d4baa6a5d3acb940d77470a06fd96.css" media="all" rel="stylesheet" type="text/css" />
+    
 
-5. 恢复完成后，进入U盘目录 `/Volumes/OS X Base System/System/Installation` 删除 `Package` 替身身文件
 
-6. 拷贝  `/Volumes/OS X Install ESD/Packages`  文件夹至 U 盘 `/Volumes/OS X Base System/System/Installation` 目录下
+    <meta http-equiv="x-pjax-version" content="bbb52dcc66fc78f705936df488ce005d">
 
-\# 完成 
+      
+  <meta name="description" content="simonhsia.github.io - Diary">
+  <meta name="go-import" content="github.com/Simonhsia/simonhsia.github.io git https://github.com/Simonhsia/simonhsia.github.io.git">
+
+  <meta content="8306701" name="octolytics-dimension-user_id" /><meta content="Simonhsia" name="octolytics-dimension-user_login" /><meta content="22686415" name="octolytics-dimension-repository_id" /><meta content="Simonhsia/simonhsia.github.io" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="22686415" name="octolytics-dimension-repository_network_root_id" /><meta content="Simonhsia/simonhsia.github.io" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/Simonhsia/simonhsia.github.io/commits/master.atom" rel="alternate" title="Recent Commits to simonhsia.github.io:master" type="application/atom+xml">
+
+  </head>
+
+
+  <body class="logged_in  env-production macintosh vis-public page-blob">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div class="wrapper">
+      
+      
+      
+      
+
+
+      <div class="header header-logged-in true">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/" aria-label="Homepage" ga-data-click="Header, go to dashboard, icon:logo">
+  <span class="mega-octicon octicon-mark-github"></span>
+</a>
+
+
+      <div class="site-search repo-scope js-site-search">
+          <form accept-charset="UTF-8" action="/Simonhsia/simonhsia.github.io/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="/Simonhsia/simonhsia.github.io/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+  <input type="text"
+    class="js-site-search-field is-clearable"
+    data-hotkey="s"
+    name="q"
+    placeholder="Search"
+    data-global-scope-placeholder="Search GitHub"
+    data-repo-scope-placeholder="Search"
+    tabindex="1"
+    autocapitalize="off">
+  <div class="scope-badge">This repository</div>
+</form>
+      </div>
+      <ul class="header-nav left">
+        <li class="header-nav-item explore">
+          <a class="header-nav-link" href="/explore" data-ga-click="Header, go to explore, text:explore">Explore</a>
+        </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://gist.github.com" data-ga-click="Header, go to gist, text:gist">Gist</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/blog" data-ga-click="Header, go to blog, text:blog">Blog</a>
+          </li>
+        <li class="header-nav-item">
+          <a class="header-nav-link" href="https://help.github.com" data-ga-click="Header, go to help, text:help">Help</a>
+        </li>
+      </ul>
+
+    
+<ul class="header-nav user-nav right" id="user-links">
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link name" href="/Simonhsia" data-ga-click="Header, go to profile, text:username">
+      <img alt="Simonhsia" class="avatar" data-user="8306701" height="20" src="https://avatars0.githubusercontent.com/u/8306701?v=2&amp;s=40" width="20" />
+      <span class="css-truncate">
+        <span class="css-truncate-target">Simonhsia</span>
+      </span>
+    </a>
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link js-menu-target tooltipped tooltipped-s" href="#" aria-label="Create new..." data-ga-click="Header, create new, icon:add">
+      <span class="octicon octicon-plus"></span>
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      
+<ul class="dropdown-menu">
+  <li>
+    <a href="/new"><span class="octicon octicon-repo"></span> New repository</a>
+  </li>
+  <li>
+    <a href="/organizations/new"><span class="octicon octicon-organization"></span> New organization</a>
+  </li>
+
+
+    <li class="dropdown-divider"></li>
+    <li class="dropdown-header">
+      <span title="Simonhsia/simonhsia.github.io">This repository</span>
+    </li>
+      <li>
+        <a href="/Simonhsia/simonhsia.github.io/issues/new"><span class="octicon octicon-issue-opened"></span> New issue</a>
+      </li>
+      <li>
+        <a href="/Simonhsia/simonhsia.github.io/settings/collaboration"><span class="octicon octicon-person"></span> New collaborator</a>
+      </li>
+</ul>
+
+    </div>
+  </li>
+
+  <li class="header-nav-item">
+        <a href="/notifications" aria-label="You have no unread notifications" class="header-nav-link notification-indicator tooltipped tooltipped-s" data-ga-click="Header, go to notifications, icon:read" data-hotkey="g n">
+        <span class="mail-status all-read"></span>
+        <span class="octicon octicon-inbox"></span>
+</a>
+  </li>
+
+  <li class="header-nav-item">
+    <a class="header-nav-link tooltipped tooltipped-s" href="/settings/profile" id="account_settings" aria-label="Settings" data-ga-click="Header, go to settings, icon:settings">
+      <span class="octicon octicon-gear"></span>
+    </a>
+  </li>
+
+  <li class="header-nav-item">
+    <form accept-charset="UTF-8" action="/logout" class="logout-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="EDTIuJFH68xMh0UHnT/Zife0sZy4OLOOL/hXrhsfC00R+rTLpr6EK+7eOkTXS0XSCXU9jJBZc9udp20lu5u/tg==" /></div>
+      <button class="header-nav-link sign-out-button tooltipped tooltipped-s" aria-label="Sign out" data-ga-click="Header, sign out, icon:logout">
+        <span class="octicon octicon-sign-out"></span>
+      </button>
+</form>  </li>
+
+</ul>
+
+
+    
+  </div>
+</div>
+
+      
+
+        
+
+
+      <div id="start-of-content" class="accessibility-aid"></div>
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    <div id="js-flash-container">
+      
+    </div>
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+<ul class="pagehead-actions">
+
+    <li class="subscription">
+      <form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="Jx9bxRTEj1CRRjeHKlTFc0N0TRRQ1FLSyaLaXKxohxqBqD9j+82CbUqcQcaWZvhZNHo5pKREXBwBXSHMLKWFzQ==" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="22686415" />
+
+    <div class="select-menu js-menu-container js-select-menu">
+      <a class="social-count js-social-count" href="/Simonhsia/simonhsia.github.io/watchers">
+        1
+      </a>
+      <a href="/Simonhsia/simonhsia.github.io/subscription"
+        class="minibutton select-menu-button with-count js-menu-target" role="button" tabindex="0" aria-haspopup="true">
+        <span class="js-select-button">
+          <span class="octicon octicon-eye"></span>
+          Unwatch
+        </span>
+      </a>
+
+      <div class="select-menu-modal-holder">
+        <div class="select-menu-modal subscription-menu-modal js-menu-content" aria-hidden="true">
+          <div class="select-menu-header">
+            <span class="select-menu-title">Notifications</span>
+            <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+          </div> <!-- /.select-menu-header -->
+
+          <div class="select-menu-list js-navigation-container" role="menu">
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_included" name="do" type="radio" value="included" />
+                <h4>Not watching</h4>
+                <span class="description">Be notified when participating or @mentioned.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye"></span>
+                  Watch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input checked="checked" id="do_subscribed" name="do" type="radio" value="subscribed" />
+                <h4>Watching</h4>
+                <span class="description">Be notified of all conversations.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye"></span>
+                  Unwatch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_ignore" name="do" type="radio" value="ignore" />
+                <h4>Ignoring</h4>
+                <span class="description">Never be notified.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-mute"></span>
+                  Stop ignoring
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+          </div> <!-- /.select-menu-list -->
+
+        </div> <!-- /.select-menu-modal -->
+      </div> <!-- /.select-menu-modal-holder -->
+    </div> <!-- /.select-menu -->
+
+</form>
+    </li>
+
+  <li>
+    
+  <div class="js-toggler-container js-social-container starring-container ">
+
+    <form accept-charset="UTF-8" action="/Simonhsia/simonhsia.github.io/unstar" class="js-toggler-form starred js-unstar-button" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="cvOwGFV2o8mihibJaL0CH7eUviFgv/F+G/cxCk8u6rXehcKoWQEzdIp1BLGvhtTbOrkCbQV2QQh+qFass73EDw==" /></div>
+      <button
+        class="minibutton with-count js-toggler-target star-button"
+        aria-label="Unstar this repository" title="Unstar Simonhsia/simonhsia.github.io">
+        <span class="octicon octicon-star"></span>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="/Simonhsia/simonhsia.github.io/stargazers">
+          0
+        </a>
+</form>
+    <form accept-charset="UTF-8" action="/Simonhsia/simonhsia.github.io/star" class="js-toggler-form unstarred js-star-button" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="eJM4nkyuFYT+NsFSVCulx7Dn3OCUbtTIE1BK7TQV/mS/hDjZjBGqhQYLvA05KmiOLOcrExBEm00147GpL7TUqA==" /></div>
+      <button
+        class="minibutton with-count js-toggler-target star-button"
+        aria-label="Star this repository" title="Star Simonhsia/simonhsia.github.io">
+        <span class="octicon octicon-star"></span>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="/Simonhsia/simonhsia.github.io/stargazers">
+          0
+        </a>
+</form>  </div>
+
+  </li>
+
+
+        <li>
+          <a href="/Simonhsia/simonhsia.github.io/fork" class="minibutton with-count js-toggler-target fork-button tooltipped-n" title="Fork your own copy of Simonhsia/simonhsia.github.io to your account" aria-label="Fork your own copy of Simonhsia/simonhsia.github.io to your account" rel="nofollow" data-method="post">
+            <span class="octicon octicon-repo-forked"></span>
+            Fork
+          </a>
+          <a href="/Simonhsia/simonhsia.github.io/network" class="social-count">0</a>
+        </li>
+
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author"><a href="/Simonhsia" class="url fn" itemprop="url" rel="author"><span itemprop="title">Simonhsia</span></a></span><!--
+       --><span class="path-divider">/</span><!--
+       --><strong><a href="/Simonhsia/simonhsia.github.io" class="js-current-repository js-repo-home-link">simonhsia.github.io</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline  ">
+        <div class="repository-sidebar clearfix">
+            
+<div class="sunken-menu vertical-right repo-nav js-repo-nav js-repository-container-pjax js-octicon-loaders" data-issue-count-url="/Simonhsia/simonhsia.github.io/issues/counts">
+  <div class="sunken-menu-contents">
+    <ul class="sunken-menu-group">
+      <li class="tooltipped tooltipped-w" aria-label="Code">
+        <a href="/Simonhsia/simonhsia.github.io" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /Simonhsia/simonhsia.github.io">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+        <li class="tooltipped tooltipped-w" aria-label="Issues">
+          <a href="/Simonhsia/simonhsia.github.io/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /Simonhsia/simonhsia.github.io/issues">
+            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+            <span class="js-issue-replace-counter"></span>
+            <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Pull Requests">
+        <a href="/Simonhsia/simonhsia.github.io/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g p" data-selected-links="repo_pulls /Simonhsia/simonhsia.github.io/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class="js-pull-replace-counter"></span>
+            <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+
+        <li class="tooltipped tooltipped-w" aria-label="Wiki">
+          <a href="/Simonhsia/simonhsia.github.io/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g w" data-selected-links="repo_wiki /Simonhsia/simonhsia.github.io/wiki">
+            <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
+            <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+    </ul>
+    <div class="sunken-menu-separator"></div>
+    <ul class="sunken-menu-group">
+
+      <li class="tooltipped tooltipped-w" aria-label="Pulse">
+        <a href="/Simonhsia/simonhsia.github.io/pulse/weekly" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="pulse /Simonhsia/simonhsia.github.io/pulse/weekly">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Graphs">
+        <a href="/Simonhsia/simonhsia.github.io/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_graphs repo_contributors /Simonhsia/simonhsia.github.io/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+    </ul>
+
+
+      <div class="sunken-menu-separator"></div>
+      <ul class="sunken-menu-group">
+        <li class="tooltipped tooltipped-w" aria-label="Settings">
+          <a href="/Simonhsia/simonhsia.github.io/settings" aria-label="Settings" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_settings /Simonhsia/simonhsia.github.io/settings">
+            <span class="octicon octicon-tools"></span> <span class="full-word">Settings</span>
+            <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+      </ul>
+  </div>
+</div>
+
+              <div class="only-with-full-nav">
+                
+  
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=push">
+  <h3><span class="text-emphasized">HTTPS</span> clone URL</h3>
+  <div class="input-group">
+    <input type="text" class="input-mini input-monospace js-url-field"
+           value="https://github.com/Simonhsia/simonhsia.github.io.git" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/Simonhsia/simonhsia.github.io.git" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+<div class="clone-url "
+  data-protocol-type="ssh"
+  data-url="/users/set_protocol?protocol_selector=ssh&amp;protocol_type=push">
+  <h3><span class="text-emphasized">SSH</span> clone URL</h3>
+  <div class="input-group">
+    <input type="text" class="input-mini input-monospace js-url-field"
+           value="git@github.com:Simonhsia/simonhsia.github.io.git" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="git@github.com:Simonhsia/simonhsia.github.io.git" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=push">
+  <h3><span class="text-emphasized">Subversion</span> checkout URL</h3>
+  <div class="input-group">
+    <input type="text" class="input-mini input-monospace js-url-field"
+           value="https://github.com/Simonhsia/simonhsia.github.io" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/Simonhsia/simonhsia.github.io" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>,
+      <a href="#" class="js-clone-selector" data-protocol="ssh">SSH</a>,
+      or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <a href="https://help.github.com/articles/which-remote-url-should-i-use" class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <span class="octicon octicon-question"></span>
+  </a>
+</p>
+
+  <a href="http://mac.github.com" data-url="github-mac://openRepo/https://github.com/Simonhsia/simonhsia.github.io" class="minibutton sidebar-button js-conduit-rewrite-url" title="Save Simonhsia/simonhsia.github.io to your computer and use it in GitHub Desktop." aria-label="Save Simonhsia/simonhsia.github.io to your computer and use it in GitHub Desktop.">
+    <span class="octicon octicon-device-desktop"></span>
+    Clone in Desktop
+  </a>
+
+
+                <a href="/Simonhsia/simonhsia.github.io/archive/master.zip"
+                   class="minibutton sidebar-button"
+                   aria-label="Download the contents of Simonhsia/simonhsia.github.io as a zip file"
+                   title="Download the contents of Simonhsia/simonhsia.github.io as a zip file"
+                   rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+              </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+          
+
+<a href="/Simonhsia/simonhsia.github.io/blob/c44c3f075adfc9407180e822433f9ffaa6819f36/_posts/2014-08-06-make-osx-install-disk.md" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+<!-- blob contrib key: blob_contributors:v21:1fdbd2b17962f15474a6d4d5db40c467 -->
+
+<div class="file-navigation">
+  
+<div class="select-menu js-menu-container js-select-menu left">
+  <span class="minibutton select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    data-master-branch="master"
+    data-ref="master"
+    title="master"
+    role="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+      </div> <!-- /.select-menu-header -->
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Find or create a branch…" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Find or create a branch…">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div><!-- /.select-menu-tabs -->
+      </div><!-- /.select-menu-filters -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item selected">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/Simonhsia/simonhsia.github.io/blob/master/_posts/2014-08-06-make-osx-install-disk.md"
+                 data-name="master"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="master">master</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+          <form accept-charset="UTF-8" action="/Simonhsia/simonhsia.github.io/branches" class="js-create-branch select-menu-item select-menu-new-item-form js-navigation-item js-new-item-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="nH0kFGvZ5r53cIKwUOpkEimRUWD6WbTxShY4tYuySJBUmxg9ON/56rpEMMIGsYNIVWUN8OHBgxMZJawd1lVMNw==" /></div>
+            <span class="octicon octicon-git-branch select-menu-item-icon"></span>
+            <div class="select-menu-item-text">
+              <h4>Create branch: <span class="js-new-item-name"></span></h4>
+              <span class="description">from ‘master’</span>
+            </div>
+            <input type="hidden" name="name" id="name" class="js-new-item-value">
+            <input type="hidden" name="branch" id="branch" value="master">
+            <input type="hidden" name="path" id="path" value="_posts/2014-08-06-make-osx-install-disk.md">
+          </form> <!-- /.select-menu-item -->
+
+      </div> <!-- /.select-menu-list -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+    </div> <!-- /.select-menu-modal -->
+  </div> <!-- /.select-menu-modal-holder -->
+</div> <!-- /.select-menu -->
+
+  <div class="button-group right">
+    <a href="/Simonhsia/simonhsia.github.io/find/master"
+          class="js-show-file-finder minibutton empty-icon tooltipped tooltipped-s"
+          data-pjax
+          data-hotkey="t"
+          aria-label="Quickly jump between files">
+      <span class="octicon octicon-list-unordered"></span>
+    </a>
+    <button class="js-zeroclipboard minibutton zeroclipboard-button"
+          data-clipboard-text="_posts/2014-08-06-make-osx-install-disk.md"
+          aria-label="Copy to clipboard"
+          data-copied-hint="Copied!">
+      <span class="octicon octicon-clippy"></span>
+    </button>
+  </div>
+
+  <div class="breadcrumb">
+    <span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/Simonhsia/simonhsia.github.io" class="" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">simonhsia.github.io</span></a></span></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/Simonhsia/simonhsia.github.io/tree/master/_posts" class="" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">_posts</span></a></span><span class="separator"> / </span><strong class="final-path">2014-08-06-make-osx-install-disk.md</strong>
+  </div>
+</div>
+
+
+  <div class="commit commit-loader file-history-tease js-deferred-content" data-url="/Simonhsia/simonhsia.github.io/contributors/master/_posts/2014-08-06-make-osx-install-disk.md">
+    <div class="file-history-tease-header">
+      Fetching contributors&hellip;
+    </div>
+
+    <div class="participation">
+      <p class="loader-loading"><img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" /></p>
+      <p class="loader-error">Cannot retrieve contributors at this time</p>
+    </div>
+  </div>
+
+<div class="file-box">
+  <div class="file">
+    <div class="meta clearfix">
+      <div class="info file-name">
+          <span>40 lines (24 sloc)</span>
+          <span class="meta-divider"></span>
+        <span>0.922 kb</span>
+      </div>
+      <div class="actions">
+        <div class="button-group">
+          <a href="/Simonhsia/simonhsia.github.io/raw/master/_posts/2014-08-06-make-osx-install-disk.md" class="minibutton " id="raw-url">Raw</a>
+            <a href="/Simonhsia/simonhsia.github.io/blame/master/_posts/2014-08-06-make-osx-install-disk.md" class="minibutton js-update-url-with-hash">Blame</a>
+          <a href="/Simonhsia/simonhsia.github.io/commits/master/_posts/2014-08-06-make-osx-install-disk.md" class="minibutton " rel="nofollow">History</a>
+        </div><!-- /.button-group -->
+
+          <a class="octicon-button tooltipped tooltipped-nw js-conduit-openfile-check"
+             href="http://mac.github.com"
+             data-url="github-mac://openRepo/https://github.com/Simonhsia/simonhsia.github.io?branch=master&amp;filepath=_posts%2F2014-08-06-make-osx-install-disk.md"
+             aria-label="Open this file in GitHub for Mac"
+             data-failed-title="Your version of GitHub for Mac is too old to open this file. Try checking for updates.">
+              <span class="octicon octicon-device-desktop"></span>
+          </a>
+
+              <a class="octicon-button js-update-url-with-hash"
+                 href="/Simonhsia/simonhsia.github.io/edit/master/_posts/2014-08-06-make-osx-install-disk.md"
+                 data-method="post" rel="nofollow" data-hotkey="e"><span class="octicon octicon-pencil"></span></a>
+
+            <a class="octicon-button danger"
+               href="/Simonhsia/simonhsia.github.io/delete/master/_posts/2014-08-06-make-osx-install-disk.md"
+               data-method="post" data-test-id="delete-blob-file" rel="nofollow">
+          <span class="octicon octicon-trashcan"></span>
+        </a>
+      </div><!-- /.actions -->
+    </div>
+        <div id="readme" class="blob instapaper_body">
+    <article class="markdown-body entry-content" itemprop="mainContentOfPage"><table>
+<thead><tr>
+<th>layout</th>
+
+  <th>title</th>
+
+  <th>author</th>
+
+  <th>excerpt</th>
+
+  <th>tags</th>
+
+  <th>comments</th>
+  </tr></thead>
+<tbody><tr>
+<td><div>post</div></td>
+
+  <td><div>制作 OSX 安装 U 盘</div></td>
+
+  <td><div>simon</div></td>
+
+  <td><div>OSX 安装 U 盘制作记要</div></td>
+
+  <td><div><table><tbody><tr>
+<td><div>OSX</div></td>
+  </tr></tbody></table></div></td>
+
+  <td><div>true</div></td>
+  </tr></tbody>
+</table><p># 准备U盘</p>
+
+<ol class="task-list">
+<li><p>用「磁盘工具」分区 U 盘，</p></li>
+<li><p>格式为「Mac OS 扩展」、方案选项为「GUID 分区表」</p></li>
+<li><p>制作</p></li>
+</ol><p># 源文件</p>
+
+<ol class="task-list">
+<li><p>在安装 App 右键「显示包内容」</p></li>
+<li><p>装载 <code>Contents/SharedSupport/InstallESD.dmg</code></p></li>
+</ol><p># 制作U盘</p>
+
+<ol class="task-list">
+<li><p>在「磁盘工具」选择 U 盘 &gt; 恢复</p></li>
+<li><p>在「源磁盘」输入 <code>/Volumes/OS X Install ESD/BaseSystem.dmg</code><br>
+「# BaseSystem.dmg 是隐藏文件，也可以在终端用 <code>open</code> 装载 dmg」</p></li>
+<li><p>拖拽 U 盘至「目的磁盘」</p></li>
+<li><p>恢复</p></li>
+<li><p>恢复完成后，进入U盘目录 <code>/Volumes/OS X Base System/System/Installation</code> 删除 <code>Package</code> 替身身文件</p></li>
+<li><p>拷贝  <code>/Volumes/OS X Install ESD/Packages</code>  文件夹至 U 盘 <code>/Volumes/OS X Base System/System/Installation</code> 目录下</p></li>
+</ol><p># 完成 </p></article>
+  </div>
+
+  </div>
+</div>
+
+<a href="#jump-to-line" rel="facebox[.linejump]" data-hotkey="l" style="display:none">Jump to Line</a>
+<div id="jump-to-line" style="display:none">
+  <form accept-charset="UTF-8" class="js-jump-to-line-form">
+    <input class="linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" autofocus>
+    <button type="submit" class="button">Go</button>
+  </form>
+</div>
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com">API</a></li>
+      <li><a href="http://training.github.com">Training</a></li>
+      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+
+    </ul>
+
+    <a href="/" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2014 <span title="0.04735s from github-fe138-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-suggester-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents js-suggester-field" placeholder=""></textarea>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w"
+      aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-x close js-ajax-error-dismiss" aria-label="Dismiss error"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-bc28a4f6b05fd6cd91bbc92310bbbc53e54c6ec2.js" type="text/javascript"></script>
+      <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-1d4c97a5d7662f40cd45545e25f18281f5b6ef5c.js" type="text/javascript"></script>
+      
+      
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
+  </body>
+</html>
+
