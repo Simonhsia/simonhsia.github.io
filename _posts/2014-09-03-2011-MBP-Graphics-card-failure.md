@@ -28,9 +28,10 @@ Apple 英文社区的贴子：https://discussions.apple.com/thread/4766577?start
 Apple 目前没有给出解决方案，无奈。明天给 Apple 那些天才们再打个电话，看有没有解决方案。
 
 <br />
->我的硬件概览：             
->型号名称： MacBook Pro                     
->型号标识符： MacBookPro8,2                 
->处理器名称： Intel Core i7                   
->处理器速度： 2.2 GHz              
->系统版本：  OS X 10.9.4 (13E28)
+
+> 我的硬件概览：             
+> 型号名称： MacBook Pro                     
+> 型号标识符： MacBookPro8,2                 
+> 处理器名称： Intel Core i7                   
+> 处理器速度： 2.2 GHz              
+> 系统版本：  OS X 10.9.4 (13E28)
