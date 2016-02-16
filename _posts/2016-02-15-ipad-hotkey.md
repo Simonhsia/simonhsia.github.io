@@ -10,7 +10,7 @@ iPad 键盘快捷键
 ⌘ = Command   
 ⌥ = Option    
 ⌃ = Control   
-⇧ = Shift
+⇧ = Shift    
    
    
 Home 界面快捷键   
