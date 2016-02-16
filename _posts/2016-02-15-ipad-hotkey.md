@@ -16,6 +16,7 @@ Home 界面快捷键
 ⌘ + Space = 搜索   
 ⌘ + Tab = 切换 App；长按 ⌘ + Tab = 悬停切换列表   
 
+
 通用快捷键   
 ⌘ + H = Home Key   
 ⌘ + N = 新建   
