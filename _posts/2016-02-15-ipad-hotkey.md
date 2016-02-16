@@ -11,7 +11,8 @@ iPad 键盘快捷键
 ⌥ = Option    
 ⌃ = Control   
 ⇧ = Shift
-
+   
+   
 Home 界面快捷键   
 ⌘ + Space = 搜索   
 ⌘ + Tab = 切换 App；长按 ⌘ + Tab = 悬停切换列表   
