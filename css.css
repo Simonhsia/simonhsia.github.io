@@ -45,7 +45,19 @@ color: #999;
 padding-top: 50px;
 text-align: center;
 padding-bottom:30px;/* 值要等于或大于footer的height值 */
+}
 
+#contentbox {
+width: 400px;
+padding: 20px 15px 20px 15px;
+text-align: left;
+line-height: 1.2em;
+
+border:1px solid;
+border-radius:3px;
+border-color: #eee;
+
+margin: 0 auto;
 }
 
 #footer {
